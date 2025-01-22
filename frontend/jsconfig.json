@@ -1,7 +1,9 @@
+
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@components/*": ["./src/app/components/*"],
+      "@images/*":["./public/assets/favicon.svg"]
     }
   }
 }

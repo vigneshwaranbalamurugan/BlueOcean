@@ -3,7 +3,8 @@
   "compilerOptions": {
     "paths": {
       "@components/*": ["./src/app/components/*"],
-      "@images/*":["./public/assets/favicon.svg"]
+      "@styles/*":["./src/app/styles/*"],
+      "@images/*":["./public/assets/*"]
     }
   }
 }

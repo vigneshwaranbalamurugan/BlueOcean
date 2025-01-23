@@ -1,0 +1,171 @@
+.footer {
+    background-color: #FCFCE8;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.quick-links, .follow-us {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+.logo-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.logo-container p {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.quick-links p, .follow-us p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quick-links ul, .follow-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.quick-links ul li, .follow-us ul li {
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.quick-links ul li:hover, .follow-us ul li:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-bottom ul li {
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-bottom ul li:hover {
+    color: #000;
+}
+
+
+.rectangle-Container {
+    position: absolute; /* Matches Android's alignParentTop and alignParentLeft */
+    top: -2.89px;
+    left: -5px;
+    width: 668.93px;
+    height: 579.4px;
+    z-index: 10000;
+  }
+
+.footer .rectangle:nth-child(1){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -80vw;
+    top: 85.89px;
+    background: rgba(255, 255, 255, 0.52);
+    border-radius: 48px;
+    transform: matrix(0.92, -0.4, 0.51, 0.86, 0, 0);
+}
+
+
+
+/* Rectangle 76 */
+.footer .rectangle:nth-child(2){
+position: absolute;
+width: 100%;
+height: 100%;
+left: -90vw;
+top: 91.98px;
+background: rgba(255, 209, 90, 0.32);
+border-radius: 48px;
+transform: matrix(0.98, -0.22, 0.3, 0.95, 0, 0);
+}
+
+.footer .rectangle:nth-child(3){
+    /* Rectangle 78 */
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 80vw;
+    /* /* left: -10vw; */
+    top: 400px; 
+    background: rgba(255, 209, 90, 0.32);
+    border-radius: 48px;
+    transform: rotate(-140.01deg);
+
+}
+
+.footer .rectangle:nth-child(4){
+    /* Rectangle 79 */
+
+position: absolute;
+width: 100%;
+height: 100%;
+left: 70vw;
+/* /* left: -10vw; */
+top: 450px; 
+background: rgba(255, 255, 255, 0.52);
+border-radius: 48px;
+transform: rotate(-145.97deg);
+
+}

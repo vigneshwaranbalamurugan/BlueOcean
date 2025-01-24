@@ -1,10 +1,10 @@
-
 {
   "compilerOptions": {
     "paths": {
       "@components/*": ["./src/app/components/*"],
       "@styles/*":["./src/app/styles/*"],
-      "@images/*":["./public/assets/*"]
+      "@images/*":["./public/assets/*"],
+      "@lib/*":["./src/app/lib/*"]
     }
   }
 }

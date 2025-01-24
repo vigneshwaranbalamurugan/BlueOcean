@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Logo from "@images/favicon.svg";
-import RectangleContainer from "@images/footerRectangle1.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import footerstyles from '@styles/footer.module.css';
 
 const FooterComponent = () => {
@@ -17,7 +17,7 @@ const FooterComponent = () => {
     
           {/* Logo Section */}
         <div className={footerstyles['logo-container']}>
-            <Image src={Logo} alt="Blue Ocean Logo" width={150} height={150} />
+            <Image src={Logo} alt="Blue Ocean Logo" className={footerstyles.logoImage} width={150} height={150} />
             <h2>Blue Ocean</h2>
             <p>Manage and Store with Blue Ocean</p>
         </div>
@@ -36,9 +36,21 @@ const FooterComponent = () => {
         <div className={footerstyles['follow-us']}>
           <p>Follow us</p>
           <ul>
-            <li>LinkedIn</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={['fab', 'linkedin']} />
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={['fab', 'facebook']} />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={['fab', 'twitter']} />
+              </a>
+            </li>
           </ul>
         </div>
       </div>

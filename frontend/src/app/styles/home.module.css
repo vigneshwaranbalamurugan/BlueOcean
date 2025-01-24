@@ -1,17 +1,19 @@
 .home {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     position: relative;
 }
 
+
+
 .home h1 {
     font-weight: 400;
-    font-size: 3em;
+    font-size: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,12 +41,14 @@
 
 .home .define{
     font-weight: 700;
-    font-size: medium;
+    font-size: large;
     z-index: 1000;
 }
 
 .home button {
     display: flex; 
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
     width: max-content; 
     max-width: 100%;
@@ -55,7 +59,7 @@
     border-left: 2.5px solid #0078D4;
     border-right: 5.5px solid #0078D4;
     background: transparent;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     white-space: nowrap;
     text-align: center; 
@@ -63,6 +67,7 @@
     color: #FFFFFF;
     background-color: #38B6FF;
     transition: background-color 0.3s, color 0.3s;
+    bottom: 0;
 }
 
 .home button .circle{
@@ -76,12 +81,12 @@ transform: rotate(4deg);
 
 .home .rectangle:nth-child(1) {
     position: absolute;
-    bottom: 30; 
-    left: 10; 
+    bottom: 150; 
+    left: 30; 
 }
 
 .home .rectangle:nth-child(2) {
     position: absolute;
-    bottom: 30; 
-    right: 10; 
+    bottom: 130; 
+    right: 30; 
 }

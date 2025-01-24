@@ -1,0 +1,77 @@
+.feature{
+    text-align: center;
+    padding: 3rem 1rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+}
+
+.feature h5:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: line-through;
+    font-size: 1.5rem;
+}
+
+.feature  .circle{
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FC4F24;
+    border-radius: 50%;
+    transform: rotate(4deg);
+}
+
+.feature .description{
+    font-weight: bold;
+    font-size: 2rem;
+}
+    
+
+.feature .features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature .features h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.feature .features div{
+    padding: 1rem;
+    border-radius: 20px;
+    width: 27%;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.feature .features div:nth-child(1){
+    background-color: #FCFCE8;
+}
+
+.feature .features div:nth-child(2){
+    background-color: #F1E8FC;
+}
+
+.feature .features div:nth-child(3){
+    background-color: #E8F7FC;
+}
+
+.feature .features .image{
+    width: 30vw ;
+}

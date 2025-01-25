@@ -4,11 +4,14 @@ import homeCard1 from "@images/homecard1.png";
 import homeCard2 from "@images/homecard2.png";
 import homeCard3 from "@images/homecard3.png";
 import feature1 from "@images/features1.svg";
-import feature2 from "@images/features2.svg"
-import feature3 from "@images/features3.svg"
-
+import feature2 from "@images/features2.svg";
+import feature3 from "@images/features3.svg";
+import homestep1 from "@images/homestep1.svg";
+import homestep2 from "@images/homestep2.svg";
+import homestep3 from "@images/homestep3.svg";
 import homestyles from "@styles/home.module.css";
 import featurestyles from "@styles/features.module.css";
+import stepstyles from "@styles/steps.module.css";
 
 export default function Home() {
   return (
@@ -56,6 +59,57 @@ export default function Home() {
                   <Image src={feature3} className={featurestyles.image} alt="Feature Image"/>
                 </div>
             </div>
+    </div>
+
+    <div className={stepstyles.step}>
+          <h5><p className={stepstyles.circle}></p>Steps</h5>
+          <h5 className={stepstyles.title}>How It Works</h5>
+          <p className={stepstyles.description}>Easily link your YouTube account with our platform. Our cloud integration ensures your channel data stays safe.</p>
+
+          <div className={`${stepstyles.step1} ${stepstyles.steps}`}>
+            <div>
+            <h1><p className={stepstyles.stepcircle}></p>Connect YouTube</h1>
+            <p>Upload Videos, and add permission. With Teamwork everything is in one 
+            central location.</p>
+
+            <ul>
+              <li>Schedule your content.</li>
+              <li>Extra features for complex security.</li>
+            </ul>
+            </div>
+            <div>
+                <Image src={homestep1} width={500} height={500} className={stepstyles.stepimages} alt="Youtube Homestep"/>
+            </div>
+          </div>
+          <div className={`${stepstyles.step2} ${stepstyles.steps}`}>
+          <div>
+            <h1><p className={stepstyles.stepcircle}></p>Organize Content with ease</h1>
+            <p>Use BlueOcean to see how your content is  uploaded and what’s left to do.</p>
+            <ul>
+              <li>Keep everyone accountable.</li>
+              <li>Set custom access levels.</li>
+            </ul>
+            </div>
+            <div>
+            <Image src={homestep2} width={450} height={450} className={stepstyles.stepimages}  alt="Youtube Homestep"/>
+            </div>
+          </div>
+          <div className={`${stepstyles.step3} ${stepstyles.steps}`}>
+            <div>
+            <h1><p className={stepstyles.stepcircle}></p>Permission Control</h1>
+            <p>Connect BluOcean  with all the favorite tools you’ve already use.</p>
+            <ul>
+              <li>Manage Permission </li>
+            </ul>
+            </div>
+            <div>
+            <Image src={homestep3} width={500} height={500} className={stepstyles.stepimages} alt="Youtube Homestep"/>
+
+            </div>
+          </div>
+
+          <p>Choose your Cloud Storage</p>
+          {/* </div> */}
     </div>
     </>
   );

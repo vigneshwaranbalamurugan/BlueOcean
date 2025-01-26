@@ -9,6 +9,7 @@ import feature3 from "@images/features3.svg";
 import homestep1 from "@images/homestep1.svg";
 import homestep2 from "@images/homestep2.svg";
 import homestep3 from "@images/homestep3.svg";
+import choosecloud from "@images/choosecloud.png";
 import homestyles from "@styles/home.module.css";
 import featurestyles from "@styles/features.module.css";
 import stepstyles from "@styles/steps.module.css";
@@ -66,12 +67,16 @@ export default function Home() {
           <h5 className={stepstyles.title}>How It Works</h5>
           <p className={stepstyles.description}>Easily link your YouTube account with our platform. Our cloud integration ensures your channel data stays safe.</p>
 
-          <div className={`${stepstyles.step1} ${stepstyles.steps}`}>
+          <div className={`${stepstyles.step1} ${stepstyles.steps} ${stepstyles['step-content']}`}>
             <div>
+  
+            <div className={stepstyles.stepleft}>
             <h1><p className={stepstyles.stepcircle}></p>Connect YouTube</h1>
-            <p>Upload Videos, and add permission. With Teamwork everything is in one 
+            </div>
+            <div>
+            <p className={stepstyles.borderp}>Upload Videos, and add permission. With Teamwork everything is in one 
             central location.</p>
-
+            </div>
             <ul>
               <li>Schedule your content.</li>
               <li>Extra features for complex security.</li>
@@ -81,26 +86,25 @@ export default function Home() {
                 <Image src={homestep1} width={500} height={500} className={stepstyles.stepimages} alt="Youtube Homestep"/>
             </div>
           </div>
-          <div className={`${stepstyles.step2} ${stepstyles.steps}`}>
+          <div className={`${stepstyles.step2} ${stepstyles.steps} ${stepstyles['step-content']}`}>
           <div>
             <h1><p className={stepstyles.stepcircle}></p>Organize Content with ease</h1>
-            <p>Use BlueOcean to see how your content is  uploaded and what’s left to do.</p>
+            <p className={stepstyles.borderp}>Use BlueOcean to see how your content is  uploaded and what’s left to do.</p>
             <ul>
               <li>Keep everyone accountable.</li>
               <li>Set custom access levels.</li>
             </ul>
             </div>
             <div>
-            <Image src={homestep2} width={450} height={450} className={stepstyles.stepimages}  alt="Youtube Homestep"/>
+            <Image src={homestep2} width={480} height={600} className={stepstyles.stepimages}  alt="Youtube Homestep"/>
             </div>
           </div>
-          <div className={`${stepstyles.step3} ${stepstyles.steps}`}>
+          <div className={`${stepstyles.step3} ${stepstyles.steps} ${stepstyles['step-content']}`}>
             <div>
             <h1><p className={stepstyles.stepcircle}></p>Permission Control</h1>
-            <p>Connect BluOcean  with all the favorite tools you’ve already use.</p>
-            <ul>
-              <li>Manage Permission </li>
-            </ul>
+            <p className={stepstyles.borderp}>Connect BluOcean  with all the favorite tools you’ve already use.</p>
+            <h5> <p className={stepstyles.stepcircle}></p> Manage Permission </h5>
+            
             </div>
             <div>
             <Image src={homestep3} width={500} height={500} className={stepstyles.stepimages} alt="Youtube Homestep"/>
@@ -108,8 +112,19 @@ export default function Home() {
             </div>
           </div>
 
-          <p>Choose your Cloud Storage</p>
-          {/* </div> */}
+         {/* <Image src={choosecloud} width={350} height={250} style={{margin:'8vh 0'}}alt="Choose Cloud"/> */}
+         
+            
+          <div className={stepstyles.cloudcontainer}>
+            <p>Choose your Cloud Storage</p>
+            <div className={stepstyles.cloudtoggle}>
+              <div className={stepstyles.cloudoption}>On 1TB</div>
+              <div className={`${stepstyles.cloudoption} ${stepstyles.cloudactive}`}>
+                More than One TB
+                <span className={stepstyles.cloudbadge}>Most Recommended</span>
+              </div>
+            </div>
+          </div>
     </div>
     </>
   );

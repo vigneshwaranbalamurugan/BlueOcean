@@ -43,6 +43,7 @@
     font-weight: 700;
     font-size: large;
     z-index: 1000;
+    width: 45%;
 }
 
 .home button {

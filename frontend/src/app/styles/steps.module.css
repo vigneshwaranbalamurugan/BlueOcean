@@ -14,7 +14,7 @@
     align-items: center;
     gap: 0.3rem;
     text-decoration: line-through;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Caveat';
 }
 
@@ -33,6 +33,7 @@
 }
 
 .step .description{
+    width: 60%;
     font-weight: 400;
     font-size: 1.5em;
 }
@@ -72,7 +73,7 @@
 }
 
 .step .steps h1{
-    font-size: 2em;
+    font-size: 3em; 
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -85,12 +86,13 @@
 
 .step  .stepcircle{
     box-sizing: border-box;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 4px solid #FFFFFF;
     border-radius: 50%;
     transform: rotate(4deg);
 }
+
 
 .stepimages {
     position: absolute;
@@ -100,3 +102,156 @@
     max-height: 100%; 
     object-fit: contain;
 }
+
+
+.step-content {
+    color: #FFFFFF; 
+    border-radius: 20px; 
+    padding: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    font-family: Arial, sans-serif; 
+}
+
+.stepcircle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF; 
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+.step-content h1 {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    margin: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.step-content p {
+    font-size: 1.3rem;
+    margin: 3vh 0; 
+    line-height: 1.5; 
+
+}
+
+.step-content .borderp{
+    border-left: 2px solid  #FFFFFF;
+    padding: 0 1rem;
+}
+
+
+.step-content ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 5vh 0; 
+}
+
+.step-content li {
+    border:1.5px solid rgba(255, 255, 255, 0.2); 
+    padding: 0.5rem 1rem; 
+    margin-bottom: 0.5rem; 
+    border-radius: 12px; 
+    font-size: 0.9rem; 
+    display: flex;
+    align-items: center;
+}
+
+.step-content li::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.step1 li:nth-child(1)::before {
+    background-image: url('@images/homestep1image1.png');
+}
+
+.step1 li:nth-child(2)::before {
+    background-image: url('@images/homestep1image2.png');
+}
+
+.step2 li:nth-child(1)::before {
+    background-image: url('@images/homestep2image1.png');
+}
+
+.step2 li:nth-child(2)::before {
+    background-image: url('@images/homestep2image2.png');
+}
+.step-content h5 {
+    display: inline-flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    padding:0 1rem; 
+    font-size: 1.3rem; 
+    background-color: #FC4F24; 
+    color: #FFFFFF; 
+    border-radius: 50px;
+    white-space: nowrap; 
+}
+
+.step-content h5 .stepcircle{
+    width: 20px;
+    height: 20px;
+}
+
+.cloudcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .cloudcontainer p{
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+  .cloudtoggle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 60px;
+    border-top: 2px solid #0078D4;
+    border-left: 2px solid #0078D4;
+    border-bottom: 5px solid #0078D4;
+    border-right: 5px solid #0078D4;
+    color: #000000;
+    position:relative;
+
+  }
+  
+  .cloudactive{
+    background-color: #2684FF;
+    padding: 0.8rem;
+    border-radius: 40px;
+  }
+
+  .cloudbadge {
+    position: absolute;
+    top: -15;
+    right: -50;
+    background-color: #ffe6e6;
+    color: #ff5c5c;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: rotate(20deg);
+  }
+  
+  .cloudoption{
+    cursor: pointer;
+  }

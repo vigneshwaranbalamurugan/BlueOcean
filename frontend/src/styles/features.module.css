@@ -1,7 +1,7 @@
-.feature{
+.feature {
     text-align: center;
     padding: 3rem 1rem;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -9,17 +9,24 @@
     position: relative;
 }
 
-.feature h5:nth-child(1){
+
+
+.feature h5:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
     text-decoration: line-through;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-family: 'Caveat';
+    transition: transform 0.3s ease;
 }
 
-.feature  .circle{
+.feature h5:nth-child(1):hover {
+    transform: scale(1.05);
+}
+
+.feature .circle {
     box-sizing: border-box;
     width: 15px;
     height: 15px;
@@ -28,51 +35,124 @@
     transform: rotate(4deg);
 }
 
-.feature .description{
+.feature .description {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
 }
-    
 
-.feature .features{
+
+
+.feature .features {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.feature .features h1{
+.feature .features div {
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: calc(33.33% - 2rem);
+    min-width: 300px;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    /* transform: rotate(10deg); */
+}
+
+
+
+.feature .features div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature .features div:nth-child(1) {
+    background-color: rgba(252, 252, 232, 0.8);
+}
+
+.feature .features div:nth-child(2) {
+    background-color: rgba(241, 232, 252, 0.8);
+}
+
+.feature .features div:nth-child(3) {
+    background-color: rgba(232, 247, 252, 0.8);
+}
+
+.feature .features h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: clamp(1.8rem, 3.5vw, 1.5rem);
 }
 
-.feature .features div{
-    padding: 1rem;
-    border-radius: 20px;
-    width: 27%;
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: column;
+.feature .features .image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.feature .features div:nth-child(1){
-    background-color: #FCFCE8;
+.feature .features .image:hover {
+    transform: scale(1.05);
 }
 
-.feature .features div:nth-child(2){
-    background-color: #F1E8FC;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .feature .features div {
+        width: calc(50% - 2rem);
+    }
 }
 
-.feature .features div:nth-child(3){
-    background-color: #E8F7FC;
+@media screen and (max-width: 768px) {
+    .feature {
+        padding: 2rem 1rem;
+    }
+    
+    .feature .features div {
+        width: 100%;
+        min-width: unset;
+    }
 }
 
-.feature .features .image{
-    width: 30vw ;
+@media screen and (max-width: 480px) {
+    .feature {
+        gap: 1.5rem;
+    }
+    
+    .feature .features {
+        gap: 1rem;
+    }
+    
+    .feature .features div {
+        padding: 1rem;
+    }
 }
+
+/* Add support for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .feature,
+    .feature .description,
+    .feature .features div,
+    .feature .circle {
+        animation: none;
+        transform: none;
+    }
+    
+    .feature .features div:hover,
+    .feature .features .image:hover,
+    .feature h5:hover {
+        transform: none;
+    }
+}
+
+

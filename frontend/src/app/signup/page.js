@@ -2,11 +2,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Camera, Mail, CheckCircle, XCircle, ArrowRight , Eye, EyeOff} from 'lucide-react';
+import { Camera, Mail, CheckCircle, XCircle, ArrowRight , Eye, EyeOff,ContactRound} from 'lucide-react';
 import illustration from "@images/signup/Loginillus.png";
+import axios from "axios";
+import { toast } from "react-toastify";
+
 
 const AuthPages = () => {
   const [isLogin, setIsLogin] = useState(true);
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +30,7 @@ const AuthPages = () => {
 
   const isPasswordValid = Object.values(validations).every(Boolean);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -36,9 +40,50 @@ const AuthPages = () => {
       return;
     }
 
+    if(!isLogin){
+      try {
+
+        const formData={
+          name:name,
+          email:email,
+          password:password
+        }
+
+        const response = await axios.post("http://localhost:5273/auth/signup", formData);
+        toast.success(response.data.message);
+        setEmail("");
+        setName("");
+        setPassword("");
+      } catch (error) {
+        toast.error(error.response?.data?.message || "Signup failed!");
+      }
+    }
+
+    if(isLogin){
+      try {
+
+        const formData={
+          email:email,
+          password:password
+        }
+
+        const response = await axios.post("http://localhost:5273/auth/login", formData);
+        toast.success(response.data.message);
+        setEmail("");
+        setPassword("");
+      } catch (error) {
+        toast.error(error.response?.data?.message || "Login failed!");
+      }
+    }
+
     // Simulate loading
     setTimeout(() => setIsLoading(false), 2000);
   };
+
+
+  const handleContinueWithGoogle = () =>{
+    window.location.href = "http://localhost:5273/auth/google"; 
+  }
 
   return (
     
@@ -78,6 +123,7 @@ const AuthPages = () => {
                 <button
                   type="button"
                   className="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded-xl hover:border-red-400 hover:shadow-lg transition-all duration-300 bg-white group"
+                  onClick={handleContinueWithGoogle}
                 >
                   <svg className="h-5 w-5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -97,6 +143,25 @@ const AuthPages = () => {
                   <span className="px-2 bg-white text-gray-500">Or continue with email</span>
                 </div>
               </div>
+
+           {!isLogin &&    <div className="group">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Name
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-400 focus:border-transparent transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                    placeholder="Enter your name"
+                    required
+
+                 />
+                  <ContactRound className="absolute right-3 top-3 h-5 w-5 text-gray-400 group-hover:text-red-400 transition-colors" />
+                </div>
+              </div>
+            }
 
               {/* Email Input */}
               <div className="group">
